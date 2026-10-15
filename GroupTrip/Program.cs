@@ -22,6 +22,23 @@ double pizzaCost = PizzaCount * PizzaPrice;
 Console.WriteLine("Pizza cost: " + pizzaCost.ToString("C"));
 double tripTotal = fuelCost + pizzaCost;
 Console.WriteLine("Trip total: " + tripTotal.ToString("C"));
+Console.Write("\n");
+
+/* Part 2 */
+Console.WriteLine("=== Part 2: The Group ===");
+
+string[] names = { "Ada", "Grace", "Alan", "Katherine" };
+double[] hoursWorked = { 22, 15, 30, 18 };
+double[] hourlyRates = { 13.50, 16.00, 11.20, 14.80 };
+
+int peopleGoing = names.Length;
+double slicesEach = (PizzaCount * PizzaSlices) / peopleGoing;
+double costPerPerson = tripTotal / peopleGoing;
+
+Console.WriteLine("People going: " + peopleGoing);
+Console.WriteLine("Slices each: " + slicesEach.ToString("F1"));
+Console.WriteLine("Slices each: " + costPerPerson.ToString("C"));
+return;
 
 /* Methods */
 static double FuelCost(double miles, double milesPerGallon, double pricePerGallon)
